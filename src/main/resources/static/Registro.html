@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperadora ECMZ - Registro</title>
+    <link rel="stylesheet" href="CSS/coope.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1>ecmz <span>Cooperadora</span></h1>
+        </div>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="donacion.html">Donaciones</a></li>
+            <li><a href="registro.html" class="active">Registrarse</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contenedor-registro">
+            <h2>Crear Cuenta</h2>
+            <form class="form-registro" id="form-registro">
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre y Apellido del Tutor / Padre:</label>
+                    <input type="text" id="nombre" placeholder="Juan Pérez" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="email">E-mail de contacto:</label>
+                    <input type="email" id="email" placeholder="ejemplo@gmail.com" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="dni-alumno">DNI del Alumno/a:</label>
+                    <input type="text" id="dni-alumno" placeholder="Número de DNI" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <button type="submit" class="btn-accion">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Escuela de Comercio Martín Zapata - UNCUYO</p>
+    </footer>
+
+</body>
+</html>

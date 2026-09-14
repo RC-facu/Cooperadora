@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperadora ECMZ - Donaciones</title>
+    <link rel="stylesheet" href="CSS/coope.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1>ecmz <span>Cooperadora</span></h1>
+        </div>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="donacion.html" class="active">Donaciones</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="vista-secundaria">
+            <h2>Formas de Colaboración</h2>
+            <ul class="lista-metodos">
+                <li><strong>1. Efectivo:</strong> En la oficina de Cooperadora (Lunes a viernes de 10 a 16 hs).</li>
+                <li><strong>2. Tarjetas de crédito y débito.</strong></li>
+                <li><strong>3. Plataforma Siro:</strong> Especificando DNI del estudiante y correo electrónico del padre/madre o tutor para enviar cupón de pago.</li>
+            </ul>
+
+            <div class="contenedor-formulario-pago">
+                <h3>¡Gracias por Donar!</h3>
+                <form class="formulario-pago" id="form-pago">
+                    <div class="grupo-campo">
+                        <label for="dni-estudiante">DNI del Estudiante:</label>
+                        <input type="text" id="dni-estudiante" placeholder="Ingrese DNI del estudiante" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="tarjeta">N° Tarjeta:</label>
+                        <input type="text" id="tarjeta" placeholder="1234 5678 9012 3456" required>
+                    </div>
+
+                    <div class="grupo-doble">
+                        <div class="grupo-campo">
+                            <label for="cvv">CVV:</label>
+                            <input type="password" id="cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="f-venc">Fecha Venc.:</label>
+                            <input type="text" id="f-venc" placeholder="MM/AA" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-donar-ya">Confirmar Donación</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Escuela de Comercio Martín Zapata - UNCUYO</p>
+    </footer>
+<script src="JS/Coopera.js"></script>
+</body>
+</html>

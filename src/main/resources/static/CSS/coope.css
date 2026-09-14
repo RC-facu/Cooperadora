@@ -1,0 +1,287 @@
+/* ================= HOJA DE ESTILOS MULTIPÁGINA ================= */
+:root {
+    --azul-principal: #005b9f;
+    --azul-oscuro: #003f6f;
+    --blanco: #ffffff;
+    --gris-fondo: #f4f5f7;
+    --gris-texto: #333333;
+    --borde: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--gris-texto);
+}
+
+header {
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header h1 span {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.cart-icon {
+    font-size: 20px;
+    background-color: var(--azul-oscuro);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: var(--azul-oscuro);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    background-color: var(--azul-principal);
+    text-decoration: none;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background: var(--blanco);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Hero e Inicio */
+.hero {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.hero-imagen {
+    flex: 1;
+    border: 2px dashed var(--borde);
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.hero-texto {
+    flex: 2;
+}
+
+.hero-texto h2 {
+    color: var(--azul-principal);
+    margin-bottom: 10px;
+}
+
+.hero-texto p {
+    line-height: 1.6;
+}
+
+/* Grilla de productos */
+.seccion-productos {
+    margin-top: 30px;
+}
+
+.seccion-productos h3 {
+    margin-bottom: 20px;
+    color: var(--azul-oscuro);
+}
+
+.productos-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.card-producto {
+    border: 1px solid var(--borde);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    border-radius: 8px;
+}
+
+.img-producto {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.btn-ver, .btn-accion {
+    display: inline-block;
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-ver:hover, .btn-accion:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* Donación */
+.seccion-donacion {
+    margin-top: 40px;
+    text-align: center;
+    border: 2px solid var(--azul-principal);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f0f7ff;
+}
+
+.btn-donar-ya {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    font-size: 20px;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-donar-ya:hover {
+    background-color: #218838;
+}
+
+/* Formularios y Vistas Secundarias */
+.vista-secundaria, .seccion-contacto-completa, .contenedor-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detalle-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.detalle-img {
+    flex: 1;
+    border: 2px solid var(--borde);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.detalle-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-opcion label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.precio-destacado {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--azul-principal);
+}
+
+.formulario-pago, .form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 450px;
+    margin-top: 15px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grupo-campo label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grupo-campo input, .grupo-campo select {
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+}
+
+.grupo-doble {
+    display: flex;
+    gap: 15px;
+}
+
+.grupo-doble .grupo-campo {
+    flex: 1;
+}
+
+.bloque-contacto, .bloque-autoridades {
+    margin-bottom: 20px;
+}
+
+.bloque-contacto p, .bloque-autoridades li {
+    margin-bottom: 8px;
+}
+
+.bloque-autoridades ul {
+    list-style: none;
+}
+
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #8ab4f8;
+}
