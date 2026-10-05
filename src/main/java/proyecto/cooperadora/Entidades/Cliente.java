@@ -18,7 +18,7 @@ public class Cliente {
     private int telefono;
    
    ///Constructores
-    public Cliente(Long id_cliente, String nombre, String apellido, int curso_alumno, String email, int telefono) {
+    public Cliente(Long id_cliente, String nombre, String apellido, int curso_alumno, String email, Long telefono) {
         this.id_cliente = id_cliente;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -26,7 +26,9 @@ public class Cliente {
         this.email = email;
         this.telefono = telefono;
     }
-    
+    public Cliente (){
+
+    }
     
     ///getters
  
@@ -50,7 +52,7 @@ public class Cliente {
         return email;
     }
 
-    public int getTelefono() {
+    public Long getTelefono() {
         return telefono;
     }
 
@@ -81,7 +83,7 @@ public class Cliente {
     }
 
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(Long telefono) {
         this.telefono = telefono;
     }
 }
