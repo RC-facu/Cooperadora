@@ -14,11 +14,14 @@ public class Producto {
 
     private String nombre;
     private String descripcion;
-    private String talle;
-    private String color;
     private String categoria;
-    private Double precio;
     private Integer stock;
+    private String url; // ruta de la imagen dentro de static, ej: /images/campera.png
+
+    // Precio por talle: tabla "precio" (id_producto, talle, precio)
+    @ElementCollection
+    @CollectionTable(name = "precio", joinColumns = @JoinColumn(name = "id_producto"))
+    private List<PrecioProducto> precios;
 
     // Un producto puede aparecer en varias lineas de detalle de pedido (1 a N)
     @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
@@ -28,14 +31,10 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String nombre, String descripcion, String talle, String color,
-                     String categoria, Double precio, Integer stock) {
+    public Producto(String nombre, String descripcion, String categoria, Integer stock) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.talle = talle;
-        this.color = color;
         this.categoria = categoria;
-        this.precio = precio;
         this.stock = stock;
     }
 
@@ -53,24 +52,20 @@ public class Producto {
         return descripcion;
     }
 
-    public String getTalle() {
-        return talle;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     public String getCategoria() {
         return categoria;
     }
 
-    public Double getPrecio() {
-        return precio;
-    }
-
     public Integer getStock() {
         return stock;
+    }
+
+    public List<PrecioProducto> getPrecios() {
+        return precios;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public List<DetallePedido> getDetalles() {
@@ -91,24 +86,20 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public void setTalle(String talle) {
-        this.talle = talle;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public void setPrecios(List<PrecioProducto> precios) {
+        this.precios = precios;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public void setDetalles(List<DetallePedido> detalles) {

@@ -46,6 +46,7 @@ header h1 span {
     cursor: pointer;
 }
 
+a.cart-icon { color: inherit; text-decoration: none; }
 nav {
     background-color: var(--azul-oscuro);
 }
@@ -285,3 +286,28 @@ footer {
 footer a {
     color: #8ab4f8;
 }
+
+/* ===== Catálogo e imágenes de productos ===== */
+[hidden] { display: none !important; }
+
+.productos-grid { flex-wrap: wrap; }
+.card-producto { flex: 1 1 200px; max-width: 280px; }
+
+.img-producto {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-producto-foto {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.img-placeholder { font-size: 50px; }
+.precio-desde { font-weight: bold; color: var(--azul-principal); margin: 8px 0; }
+
+.detalle-galeria { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.detalle-img { overflow: hidden; }
+.detalle-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.volver { color: var(--azul-principal); text-decoration: none; }

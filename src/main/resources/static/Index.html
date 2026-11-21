@@ -12,25 +12,25 @@
         <div class="logo-container">
             <h1>ecmz <span>Cooperadora</span></h1>
         </div>
-        <div class="cart-icon" id="btn-abrir-carrito">
+        <a class="cart-icon" id="btn-abrir-carrito" href="carrito.html" style="color:inherit;text-decoration:none;">
             🛒 <span id="cart-count">0</span>
-        </div>
+        </a>
     </header>
 
     <nav>
         <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#donacion">Donaciones</a></li>
-            <li><a href="#registro">Registrarse</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="Index.html" class="active">Inicio</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="Donacion.html">Donaciones</a></li>
+            <li><a href="Registro.html">Registrarse</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
 
         <section id="inicio" class="vista-activa">
-            
+
             <div class="hero">
                 <div class="hero-imagen">
                     <div class="remera-placeholder">👕 Talle XXXL</div>
@@ -43,22 +43,8 @@
 
             <div id="productos" class="seccion-productos">
                 <h3>Explorar Productos</h3>
-                <div class="productos-grid">
-                    <div class="card-producto">
-                        <div class="img-producto">👕</div>
-                        <h4>Remera Uniforme</h4>
-                        <button class="btn-ver">Ver detalle</button>
-                    </div>
-                    <div class="card-producto">
-                        <div class="img-producto">🧥</div>
-                        <h4>Buzo Polar</h4>
-                        <button class="btn-ver">Ver detalle</button>
-                    </div>
-                    <div class="card-producto">
-                        <div class="img-producto">📓</div>
-                        <h4>Cuaderno ECMZ</h4>
-                        <button class="btn-ver">Ver detalle</button>
-                    </div>
+                <div class="productos-grid" id="grid-productos">
+                    <p>Cargando productos...</p>
                 </div>
             </div>
 
@@ -66,52 +52,14 @@
                 <h2>DONACIÓN</h2>
                 <p>Formas de colaboración: Efectivo, Tarjetas de crédito/débito, o Plataforma Siro.</p>
                 <p><em>Con tu aporte colaborás con el gran trabajo para que cada estudiante esté mucho mejor en la escuela.</em></p>
-                <button class="btn-donar-ya" id="btn-donar-ya">¡Doná Ya!</button>
+                <a href="Donacion.html"><button class="btn-donar-ya" id="btn-donar-ya">¡Doná Ya!</button></a>
             </div>
 
-        </section>
-
-        <hr class="separador-vistas">
-
-        <section id="vista-producto" class="vista-secundaria">
-            <div class="detalle-layout">
-                <div class="detalle-img">👕 XXXL</div>
-                <div class="detalle-info">
-                    <h2>Producto</h2>
-                    <label>Color: <select><option>Azul</option><option>Blanco</option></select></label>
-                    <label>Talle: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label>
-                    <p class="precio-destacado">Precio: $000</p>
-                    <button class="btn-accion">Agregar al carrito</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="vista-carrito" class="vista-secundaria">
-            <h2>Carrito</h2>
-            <div class="lista-carrito">
-                <div class="item-carrito"><span>Producto 1</span> <span>$000</span></div>
-                <div class="item-carrito"><span>Producto 2</span> <span>$000</span></div>
-                <div class="item-carrito"><span>Producto 3</span> <span>$000</span></div>
-            </div>
-            <div class="total-carrito">
-                <h3>Suma Total: $000</h3>
-            </div>
-            <button class="btn-accion">Proceder al pago</button>
-        </section>
-
-        <section id="vista-pago" class="vista-secundaria">
-            <h2>¡Gracias por Donar!</h2>
-            <form class="formulario-pago">
-                <input type="text" placeholder="N° Tarjeta" required>
-                <input type="text" placeholder="CVV" required>
-                <input type="text" placeholder="Fecha Venc. (MM/AA)" required>
-                <button type="submit" class="btn-donar-ya">Confirmar Donación</button>
-            </form>
         </section>
 
     </main>
 
-    <footer id="contacto">
+    <footer>
         <div class="footer-layout">
             <div class="contacto-info">
                 <h4>Contacto</h4>
@@ -121,7 +69,7 @@
                 <p>🕒 Lunes a viernes, de 10 a 16 horas.</p>
                 <p>📷 Ig: @mz.cooperadora</p>
             </div>
-            
+
             <div class="autoridades">
                 <h4>Autoridades</h4>
                 <p>Presidenta: Gladys Analía Serrano</p>
@@ -129,7 +77,7 @@
                 <p>Secretaria: Sandra Daniela Miranda</p>
             </div>
         </div>
-        
+
         <div class="terminos">
             <p>Términos y condiciones | Plataforma Siro requiere DNI del estudiante y correo del tutor.</p>
         </div>

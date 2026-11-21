@@ -12,50 +12,50 @@
         <div class="logo-container">
             <h1>ecmz <span>Cooperadora</span></h1>
         </div>
-        <div class="cart-icon">
+        <a class="cart-icon" href="carrito.html" style="color:inherit;text-decoration:none;">
             🛒 <span id="cart-count">0</span>
-        </div>
+        </a>
     </header>
 
     <nav>
         <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="producto.html" class="active">Productos</a></li>
-            <li><a href="donacion.html">Donaciones</a></li>
-            <li><a href="registro.html">Registrarse</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Producto.html" class="active">Productos</a></li>
+            <li><a href="Donacion.html">Donaciones</a></li>
+            <li><a href="Registro.html">Registrarse</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="vista-secundaria">
+        <!-- Lista de productos: se ve cuando la URL no trae ?id= -->
+        <section class="vista-secundaria" id="catalogo" hidden>
+            <h2>Productos</h2>
+            <p>Elegí un producto para ver su detalle.</p>
+            <div class="productos-grid" id="grid-catalogo">
+                <p>Cargando productos...</p>
+            </div>
+        </section>
+
+        <!-- Detalle de UN producto: se ve cuando la URL trae ?id=4, por ejemplo -->
+        <section class="vista-secundaria" id="detalle-producto" hidden>
+            <p><a href="Producto.html" class="volver">&larr; Volver a productos</a></p>
             <h2>Detalle del Producto</h2>
             <div class="detalle-layout">
-                <div class="detalle-img">
-                    👕 XXXL
+                <div class="detalle-galeria">
+                    <div class="detalle-img" id="imagen-principal"></div>
                 </div>
                 <div class="detalle-info">
-                    <h3>Remera Oficial ECMZ</h3>
-                    <div class="campo-opcion">
-                        <label for="color">Color:</label>
-                        <select id="color">
-                            <option value="azul">Azul</option>
-                            <option value="blanco">Blanco</option>
-                        </select>
-                    </div>
+                    <h3 id="producto-nombre"></h3>
+                    <p id="producto-descripcion"></p>
 
-                    <div class="campo-opcion">
+                    <div class="campo-opcion" id="campo-talle">
                         <label for="talle">Talle:</label>
-                        <select id="talle">
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                            <option value="xxxl">XXXL</option>
-                        </select>
+                        <select id="talle"></select>
                     </div>
 
-                    <p class="precio-destacado">Precio: $000</p>
+                    <p class="precio-destacado" id="precio-producto">Precio: $000</p>
+                    <p id="stock-producto"></p>
                     <button class="btn-accion" id="btn-agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
@@ -66,5 +66,6 @@
         <p>Escuela de Comercio Martín Zapata - UNCUYO</p>
     </footer>
 
+<script src="JS/Coopera.js"></script>
 </body>
 </html>
