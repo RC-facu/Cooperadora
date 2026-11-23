@@ -95,12 +95,16 @@ main {
 
 .hero-imagen {
     flex: 1;
-    border: 2px dashed var(--borde);
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 380px;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: #fafafa;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero-texto {
@@ -311,3 +315,123 @@ footer a {
 .detalle-img { overflow: hidden; }
 .detalle-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .volver { color: var(--azul-principal); text-decoration: none; }
+
+/*lOGO ESC*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-escuela {
+    height: 44px;
+    width: auto;
+}
+.logo-escuela {
+    height: 44px;
+    width: auto;
+    background: var(--blanco);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+/* ===== Footer estilo e-commerce ===== */
+footer.pie {
+    background: #00386b;
+    color: #e8eef5;
+    text-align: left;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.pie a {
+    color: #e8eef5;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.pie-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 25px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.pie h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    display: inline-block;
+}
+
+.pie p,
+.pie li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 6px;
+}
+
+.pie ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pie-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.pie-marca img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.pie-marca strong {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.pie-pagos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.pie-pagos span {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.pie-inferior {
+    background: #002a52;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 13px;
+}
+
+.pie-inferior p {
+    margin: 3px 0;
+}
+
+@media (max-width: 800px) {
+    .pie-contenedor { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 500px) {
+    .pie-contenedor { grid-template-columns: 1fr; }
+}

@@ -247,17 +247,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Lógica para el formulario de Donación (Donacion.html)
-    const formPago = document.getElementById('form-pago');
-    if (formPago) {
-        formPago.addEventListener('submit', (e) => {
-            e.preventDefault();
+    const btnDonar = document.getElementById('btn-donar-whatsapp');
+    if (btnDonar) {
+        btnDonar.addEventListener('click', () => {
+            const tutor = document.getElementById('nombre-tutor').value.trim();
+            const alumno = document.getElementById('nombre-alumno').value.trim();
+            const curso = document.getElementById('curso-alumno').value.trim();
+            const monto = document.getElementById('monto-donacion').value.trim();
 
-            const dni = document.getElementById('dni-estudiante').value;
+            if (!tutor || !alumno || !curso) {
+                alert('Completá tu nombre, el del alumno/a y el curso.');
+                return;
+            }
 
-            console.log(`Procesando donación para el DNI: ${dni}`);
-            alert('¡Gracias por tu aporte para la escuela!');
+            const mensaje = [
+                'Hola! Quiero donar' + (monto ? ` $${monto}` : '') + ' a la Cooperadora ECMZ.',
+                '',
+                `Familia: ${tutor}`,
+                `Alumno/a: ${alumno} (${curso})`,
+                '',
+                'Quedo a la espera para coordinar la donación. Gracias!'
+            ].join('\n');
 
-            formPago.reset();
+            const url = `https://wa.me/${WHATSAPP_COOPERADORA}?text=${encodeURIComponent(mensaje)}`;
+            const ventana = window.open(url, '_blank');
+            if (!ventana) window.location.href = url; // si el navegador bloquea la ventana nueva
         });
     }
 
